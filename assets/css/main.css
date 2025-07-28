@@ -480,6 +480,8 @@
     .mobile-nav-active .navmenu>ul {
       display: block;
     }
+    
+    
   }
   
   /*--------------------------------------------------------------
@@ -4222,3 +4224,29 @@
   .btn-getstarted#toggle-darkmode i {
     color: inherit;
   }
+
+  @media (max-width: 1199px) {
+  /* Exibe o menu ao clicar no botão (quando body ganha a classe) */
+  body.mobile-nav-active .navmenu ul {
+    display: flex !important;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #ffffff; /* cor de fundo do menu mobile */
+    padding: 20px;
+    border-radius: 8px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 9998;
+  }
+
+  /* Estilo do botão de menu mobile */
+  .mobile-nav-toggle {
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #000; /* cor do ícone do menu */
+    cursor: pointer;
+  }
+}

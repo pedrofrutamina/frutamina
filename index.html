@@ -63,6 +63,7 @@
         </button>
       </nav>
 
+
       <!-- Botão de modo escuro/claro moderno -->
       <a id="toggle-darkmode" class="btn btn-darkmode" role="button" aria-label="Alternar modo escuro/claro"
         style="font-size:2.2rem; padding:0.7rem 1.1rem; background:transparent; color:var(--nav-hover-color); border:none; transition:background 0.3s, color 0.3s; cursor:pointer;">
@@ -607,6 +608,14 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.querySelector('.mobile-nav-toggle');
+      toggle.addEventListener('click', () => {
+        document.body.classList.toggle('mobile-nav-active');
+      });
+    });
+  </script>
+  <script>
     // Modo escuro/claro global
     const darkBtn = document.getElementById('toggle-darkmode');
     const icon = document.getElementById('darkmode-icon');
@@ -683,6 +692,9 @@
         });
       }
     });
+
+  </script>
+
   </script>
 
 </body>
